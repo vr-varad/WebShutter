@@ -18,6 +18,8 @@ if camera_image:
     name = st.text_input('Name For the Photo:', placeholder='Enter Name here.....', key='name')
     if name:
         st.text(f'{name}.png')
+    else:
+        name = 'img'
     st.button('Download', key='download')
     if st.session_state['download']:
         img.save(f'{name}.png')
